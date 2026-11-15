@@ -1,0 +1,97 @@
+{
+  "snapshot_id": "S1",
+  "version": 1,
+  "source": "Synthetic demo seed (data/seeds/S1.json)",
+  "label": "FICTIONAL DEMO DATA. Not a live procurement integration.",
+  "as_of": "2026-10-31T18:00:00+05:30",
+  "coverage": {
+    "receipts_complete": true,
+    "acceptance_complete": true,
+    "prior_invoices_complete": true
+  },
+  "buyers": [
+    {
+      "party_id": "BUY-NORTHSTAR",
+      "legal_name": "Northstar Manufacturing Private Limited",
+      "registration_id": "SYN-REG-NS-0001",
+      "status": "ACTIVE",
+      "address": "Plot 14, Fictional Industrial Estate, Pune 411000"
+    }
+  ],
+  "suppliers": [
+    {
+      "party_id": "SUP-APEX",
+      "legal_name": "Apex Packaging Private Limited",
+      "registration_id": "SYN-REG-AP-0042",
+      "status": "ACTIVE",
+      "address": "Unit 7, Fictional Packaging Park, Nashik 422000"
+    }
+  ],
+  "party_aliases": [
+    {"party_id": "BUY-NORTHSTAR", "alias": "Northstar Mfg Pvt Ltd", "approved": true, "source": "Buyer master alias list v1"},
+    {"party_id": "SUP-APEX", "alias": "Apex Pack Pvt Ltd", "approved": true, "source": "Vendor master alias list v1"}
+  ],
+  "items": [
+    {
+      "sku": "CARTON-5P",
+      "description": "Corrugated carton, 5-ply",
+      "specifications": {"ply": "5"},
+      "base_unit": "EA"
+    }
+  ],
+  "supplier_item_mappings": [
+    {"mapping_id": "MAP-APEX-BX5P", "supplier_id": "SUP-APEX", "kind": "CODE", "value": "BX-5P", "sku": "CARTON-5P", "version": 1}
+  ],
+  "unit_conversions": [],
+  "po_headers": [
+    {
+      "po_number": "PO-101", "version": 1, "buyer_id": "BUY-NORTHSTAR", "supplier_id": "SUP-APEX",
+      "currency": "INR", "po_date": "2026-10-01", "status": "OPEN", "gross_cap": "236000.00"
+    },
+    {
+      "po_number": "PO-102", "version": 1, "buyer_id": "BUY-NORTHSTAR", "supplier_id": "SUP-APEX",
+      "currency": "INR", "po_date": "2026-10-15", "status": "OPEN", "gross_cap": "118000.00"
+    }
+  ],
+  "po_lines": [
+    {
+      "po_number": "PO-101", "line_no": 10, "sku": "CARTON-5P", "specifications": {"ply": "5"},
+      "unit": "EA", "quantity": "1000", "net_unit_price": "200.00", "tax_rate_pct": "18",
+      "match_policy": "RECEIPT_REQUIRED"
+    },
+    {
+      "po_number": "PO-102", "line_no": 10, "sku": "CARTON-5P", "specifications": {"ply": "5"},
+      "unit": "EA", "quantity": "500", "net_unit_price": "200.00", "tax_rate_pct": "18",
+      "match_policy": "RECEIPT_REQUIRED"
+    }
+  ],
+  "receipt_lines": [
+    {"receipt_id": "GRN-5001", "po_number": "PO-101", "line_no": 10, "receipt_date": "2026-10-10", "received_qty": "350"},
+    {"receipt_id": "GRN-5002", "po_number": "PO-101", "line_no": 10, "receipt_date": "2026-10-20", "received_qty": "250"},
+    {"receipt_id": "GRN-5003", "po_number": "PO-102", "line_no": 10, "receipt_date": "2026-10-22", "received_qty": "300"}
+  ],
+  "prior_invoices": [
+    {
+      "bill_id": "BILL-AP-099", "buyer_id": "BUY-NORTHSTAR", "supplier_id": "SUP-APEX",
+      "invoice_number": "AP-099", "invoice_date": "2026-10-25", "state": "POSTED", "payment_status": "UNPAID",
+      "net_amount": "80000.00", "tax_amount": "14400.00", "gross_amount": "94400.00"
+    }
+  ],
+  "prior_invoice_lines": [
+    {"bill_id": "BILL-AP-099", "po_number": "PO-101", "line_no": 10, "quantity": "400", "net_amount": "80000.00", "gross_amount": "94400.00"}
+  ],
+  "supporting_references": [
+    {
+      "ref_id": "PROC-CONF-205", "kind": "PROCUREMENT_CONFIRMATION",
+      "summary": "Procurement confirms invoice AP-205 from Apex Packaging bills against PO-102.",
+      "links": {"invoice_number": "AP-205", "po_number": "PO-102"},
+      "label": "Fictional supporting note for demo"
+    },
+    {
+      "ref_id": "MASTER-VERIFY-206", "kind": "MASTER_DATA_VERIFICATION",
+      "summary": "Procurement confirms 'Apex Packaging P Ltd' on AP-206 is supplier SUP-APEX and '5 ply corr box' is CARTON-5P (5-ply, EA).",
+      "links": {"invoice_number": "AP-206", "supplier_id": "SUP-APEX", "sku": "CARTON-5P"},
+      "label": "Fictional supporting note for demo"
+    }
+  ]
+}

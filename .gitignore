@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Runtime data: databases, uploads, model artifacts, exports
+var/
+runtime/
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+uploads/
+artifacts/
+exports/
+
+# Private reference documents
+docs/private/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

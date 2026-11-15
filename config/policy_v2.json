@@ -1,0 +1,15 @@
+{
+  "policy_version": "policy_v2",
+  "note": "Explicit demo-company policies, not tax advice (SPEC.md §6).",
+  "supported_currency": "INR",
+  "supported_document_types": ["INVOICE"],
+  "supported_tax_bases": ["EXCLUSIVE"],
+  "line_arithmetic_tolerance": "0.01",
+  "invoice_arithmetic_tolerance": "1.00",
+  "unit_price_tolerance": "0",
+  "overbilling_quantity_tolerance": "0",
+  "po_overspend_tolerance": "0",
+  "max_quantity_decimals": 6,
+  "max_po_candidates": 5,
+  "max_text_suggestions": 3
+}

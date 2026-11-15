@@ -1,0 +1,41 @@
+{
+  "schema_version": "invoice_v2",
+  "input_source": "STRUCTURED_FIXTURE",
+  "input_label": "H1 structured input (AP-204). Fictional. No PDF or model involved.",
+  "document_type": {"raw": "TAX INVOICE", "value": "INVOICE", "evidence": {"page": 1, "block_ids": ["p1-b1"], "quote": "TAX INVOICE"}},
+  "supplier": {
+    "name": {"raw": "Apex Packaging Private Limited", "value": "Apex Packaging Private Limited", "evidence": {"page": 1, "block_ids": ["p1-b2"], "quote": "Apex Packaging Private Limited"}},
+    "registration_id": {"raw": "SYN-REG-AP-0042", "value": "SYN-REG-AP-0042", "evidence": {"page": 1, "block_ids": ["p1-b2"], "quote": "Reg. ID: SYN-REG-AP-0042"}}
+  },
+  "bill_to": {
+    "name": {"raw": "Northstar Manufacturing Private Limited", "value": "Northstar Manufacturing Private Limited", "evidence": {"page": 1, "block_ids": ["p1-b4"], "quote": "Bill To: Northstar Manufacturing Private Limited"}},
+    "registration_id": {"raw": "SYN-REG-NS-0001", "value": "SYN-REG-NS-0001", "evidence": {"page": 1, "block_ids": ["p1-b4"], "quote": "Reg. ID: SYN-REG-NS-0001"}}
+  },
+  "ship_to": {
+    "name": {"raw": "Northstar Manufacturing Private Limited - Plant 2", "value": "Northstar Manufacturing Private Limited - Plant 2", "evidence": {"page": 1, "block_ids": ["p1-b5"], "quote": "Ship To: Northstar Manufacturing Private Limited - Plant 2"}}
+  },
+  "invoice_number": {"raw": "AP-204", "value": "AP-204", "evidence": {"page": 1, "block_ids": ["p1-b3"], "quote": "Invoice No: AP-204"}},
+  "invoice_date": {"raw": "01-Nov-2026", "value": "2026-11-01", "evidence": {"page": 1, "block_ids": ["p1-b3"], "quote": "Invoice Date: 01-Nov-2026"}},
+  "po_reference": {"raw": "PO-101", "value": "PO-101", "evidence": {"page": 1, "block_ids": ["p1-b3"], "quote": "PO Ref: PO-101"}},
+  "currency": {"raw": "INR", "value": "INR", "evidence": {"page": 1, "block_ids": ["p1-b3"], "quote": "Currency: INR"}},
+  "subtotal": {"raw": "20,000.00", "value": "20000.00", "evidence": {"page": 1, "block_ids": ["p1-b8"], "quote": "Subtotal 20,000.00"}},
+  "tax": {"raw": "3,600.00", "value": "3600.00", "evidence": {"page": 1, "block_ids": ["p1-b8"], "quote": "GST @ 18% 3,600.00"}},
+  "charges": {"raw": "0.00", "value": "0.00", "evidence": {"page": 1, "block_ids": ["p1-b8"], "quote": "Freight / Other charges 0.00"}},
+  "discount": {"raw": "0.00", "value": "0.00", "evidence": {"page": 1, "block_ids": ["p1-b8"], "quote": "Discount 0.00"}},
+  "total": {"raw": "23,600.00", "value": "23600.00", "evidence": {"page": 1, "block_ids": ["p1-b9"], "quote": "Total (INR) 23,600.00"}},
+  "tax_basis": {"raw": "Tax extra @ 18%", "value": "EXCLUSIVE", "evidence": {"page": 1, "block_ids": ["p1-b8"], "quote": "GST @ 18% 3,600.00"}},
+  "lines": [
+    {
+      "source_line_id": "L1",
+      "printed_po_line": {"raw": "10", "value": 10, "evidence": {"page": 1, "block_ids": ["p1-b7"], "quote": "10"}},
+      "supplier_item_code": {"raw": "BX-5P", "value": "BX-5P", "evidence": {"page": 1, "block_ids": ["p1-b7"], "quote": "BX-5P"}},
+      "description": {"raw": "CORR CARTON 5PLY", "value": "CORR CARTON 5PLY", "evidence": {"page": 1, "block_ids": ["p1-b7"], "quote": "CORR CARTON 5PLY"}},
+      "specifications": {"ply": "5"},
+      "quantity": {"raw": "100", "value": "100", "evidence": {"page": 1, "block_ids": ["p1-b7"], "quote": "100"}},
+      "unit": {"raw": "EA", "value": "EA", "evidence": {"page": 1, "block_ids": ["p1-b7"], "quote": "EA"}},
+      "unit_price": {"raw": "200.00", "value": "200.00", "evidence": {"page": 1, "block_ids": ["p1-b7"], "quote": "200.00"}},
+      "net_amount": {"raw": "20,000.00", "value": "20000.00", "evidence": {"page": 1, "block_ids": ["p1-b7"], "quote": "20,000.00"}}
+    }
+  ],
+  "warnings": []
+}
